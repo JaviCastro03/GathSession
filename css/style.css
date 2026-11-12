@@ -1,0 +1,261 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+img,
+svg {
+  display: block;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #2b2d3a;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid #d8296a;
+  outline-offset: 3px;
+}
+
+.header {
+  position: relative;
+  min-width: 1440px;
+  height: 810px;
+  overflow: hidden;
+  background-color: #2b2d3a;
+  zoom: tan(atan2(min(100vw, 100vh * 1440 / 810), 1440px));
+}
+.header__inner {
+  position: relative;
+  width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+}
+.header__bar {
+  display: flex;
+  align-items: center;
+  height: 92px;
+  padding: 0 118px;
+}
+
+.logo {
+  font-family: "Merriweather", serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.logo__accent {
+  color: #d8296a;
+}
+
+.nav {
+  margin-left: auto;
+  margin-right: 78px;
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+.nav__link {
+  position: relative;
+  font-size: 14px;
+  color: #a3a4ad;
+  transition: color 0.3s;
+}
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -9px;
+  width: 23px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #d8296a;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+.nav__link:hover, .nav__link--active {
+  color: #ffffff;
+}
+.nav__link:hover::after, .nav__link--active::after {
+  transform: scaleX(1);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 50px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.btn--primary {
+  background-color: #d8296a;
+  color: #ffffff;
+  box-shadow: 0 14px 30px rgba(216, 41, 106, 0.22);
+}
+.btn--primary:hover {
+  background-color: rgb(75.0981942184%, 13.6861195071%, 36.4963186856%);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(216, 41, 106, 0.4);
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+.link-arrow__text {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.link-arrow__icon {
+  transition: transform 0.3s;
+}
+.link-arrow:hover {
+  color: #d8296a;
+}
+.link-arrow:hover .link-arrow__icon {
+  transform: translateX(5px);
+}
+
+.hero {
+  position: relative;
+  height: 718px;
+}
+.hero__content {
+  position: absolute;
+  top: 71px;
+  left: 118px;
+}
+.hero__title {
+  font-family: "Merriweather", serif;
+  font-size: 61px;
+  font-weight: 700;
+  line-height: 77px;
+  color: #ffffff;
+}
+.hero__text {
+  max-width: 490px;
+  margin-top: 16px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #93949e;
+}
+.hero__cta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.features {
+  display: flex;
+  gap: 36px;
+  margin-top: 108px;
+}
+.features__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.features__icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: #3b3c49;
+}
+.features__text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.gallery {
+  position: absolute;
+  top: 40px;
+  left: 733px;
+  width: 590px;
+  height: 589px;
+}
+.gallery__ellipse {
+  position: absolute;
+  max-width: none;
+  pointer-events: none;
+}
+.gallery__ellipse--large {
+  width: 820px;
+  top: 68px;
+  left: -23px;
+}
+.gallery__ellipse--small {
+  width: 560px;
+  top: 198px;
+  left: 107px;
+}
+.gallery__photo {
+  position: absolute;
+  width: 180px;
+  object-fit: cover;
+}
+.gallery__photo--1 {
+  top: 0;
+  left: 0;
+  height: 383px;
+}
+.gallery__photo--2 {
+  top: 408px;
+  left: 0;
+  height: 181px;
+}
+.gallery__photo--3 {
+  top: 0;
+  left: 205px;
+  height: 181px;
+}
+.gallery__photo--4 {
+  top: 206px;
+  left: 205px;
+  height: 383px;
+}
+.gallery__photo--5 {
+  top: 102px;
+  left: 410px;
+  height: 384px;
+}
+
+/*# sourceMappingURL=style.css.map */

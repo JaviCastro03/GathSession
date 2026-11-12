@@ -1,0 +1,20 @@
+@use 'sass:color';
+
+// ---------- Colors (adjust them with Figma > Inspect if needed) ----------
+$color-bg: #2b2d3a;
+$color-pink: #d8296a;
+$color-pink-hover: color.adjust($color-pink, $lightness: -6%);
+$color-white: #ffffff;
+$color-muted: #93949e;
+$color-nav: #a3a4ad;
+$color-card: #3b3c49;
+
+// ---------- Typography ----------
+$font-title: 'Merriweather', serif;
+$font-main: 'Poppins', sans-serif;
+
+// ---------- Layout (static design, 1440px wide) ----------
+$layout-width: 1440px;
+$header-height: 810px;
+$bar-height: 92px;
+$side-space: 118px;

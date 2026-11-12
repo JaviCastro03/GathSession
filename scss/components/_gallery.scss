@@ -1,0 +1,65 @@
+@use "../variables" as *;
+
+// Photo grid on the right. Photos: 180px wide, 25px gap.
+.gallery {
+  position: absolute;
+  top: 132px - $bar-height;
+  left: 733px;
+  width: 590px;
+  height: 589px;
+
+  // Decorative lines. top / left are measured from the top-left corner of the photo group
+  &__ellipse {
+    position: absolute;
+    max-width: none;
+    pointer-events: none;
+
+    &--large {
+      width: 820px;
+      top: 68px;
+      left: -23px;
+    }
+
+    &--small {
+      width: 560px;
+      top: 198px;
+      left: 107px;
+    }
+  }
+
+  &__photo {
+    position: absolute;
+    width: 180px;
+    object-fit: cover;
+
+    &--1 {
+      top: 0;
+      left: 0;
+      height: 383px;
+    }
+
+    &--2 {
+      top: 408px;
+      left: 0;
+      height: 181px;
+    }
+
+    &--3 {
+      top: 0;
+      left: 205px;
+      height: 181px;
+    }
+
+    &--4 {
+      top: 206px;
+      left: 205px;
+      height: 383px;
+    }
+
+    &--5 {
+      top: 102px;
+      left: 410px;
+      height: 384px;
+    }
+  }
+}

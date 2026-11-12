@@ -1,0 +1,44 @@
+@use '../variables' as *;
+
+.nav {
+  margin-left: auto;
+  margin-right: 78px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+  }
+
+  &__link {
+    position: relative;
+    font-size: 14px;
+    color: $color-nav;
+    transition: color 0.3s;
+
+    // pink bar under the active / hovered link
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -9px;
+      width: 23px;
+      height: 3px;
+      border-radius: 2px;
+      background-color: $color-pink;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+
+    &:hover,
+    &--active {
+      color: $color-white;
+    }
+
+    &:hover::after,
+    &--active::after {
+      transform: scaleX(1);
+    }
+  }
+}

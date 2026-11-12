@@ -1,0 +1,30 @@
+@use '../variables' as *;
+
+.features {
+  display: flex;
+  gap: 36px;
+  margin-top: 108px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  // If your icon SVGs already include the dark square, remove the background-color
+  &__icon {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background-color: $color-card;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    color: $color-white;
+  }
+}

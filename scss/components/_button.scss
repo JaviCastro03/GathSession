@@ -1,0 +1,51 @@
+@use '../variables' as *;
+
+.btn {
+  display: inline-block;
+  padding: 12px 50px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+
+  &--primary {
+    background-color: $color-pink;
+    color: $color-white;
+    box-shadow: 0 14px 30px rgba($color-pink, 0.22);
+
+    &:hover {
+      background-color: $color-pink-hover;
+      transform: translateY(-2px);
+      box-shadow: 0 16px 32px rgba($color-pink, 0.4);
+    }
+  }
+}
+
+// ---------- "Learn More" link with arrow ----------
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: $color-white;
+  transition: color 0.3s;
+
+  &__text {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  &__icon {
+    transition: transform 0.3s;
+  }
+
+  &:hover {
+    color: $color-pink;
+
+    .link-arrow__icon {
+      transform: translateX(5px);
+    }
+  }
+}
